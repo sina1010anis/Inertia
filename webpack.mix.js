@@ -12,8 +12,6 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js').vue({
-    extractStyles: true,
-    globalStyles: false,
     version:3
 });
 
@@ -25,3 +23,6 @@ mix.webpackConfig({
         chunkFilename: 'js/[name].js?id=[chunkhash]',
     }
 })
+if (mix.inProduction()) {
+    mix.version();
+}

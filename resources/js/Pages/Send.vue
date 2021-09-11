@@ -5,9 +5,6 @@
 <script>
 export default {
     name: "Send",
-    props:{
-        id:String,
-    }
 }
 </script>
 
